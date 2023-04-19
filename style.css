@@ -1,0 +1,163 @@
+
+
+:root{
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%); 
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    height: 100vh;
+    
+}
+
+
+.container{
+    width: 900px;
+    padding: 150px ;
+
+}
+.gridform{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4em;
+    row-gap: 2em;
+    
+    
+}
+
+.description{
+ color: white;
+ grid-column: 1;
+ grid-row: 2 ;
+
+}
+
+form{
+    grid-column: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 10px 10px 5px rgba(76, 64, 83, 0.596);
+    
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+    border: 1px solid;
+    
+}
+input:invalid {
+    border: 2px  red;
+  }
+ 
+  
+  input:valid {
+    border: 2px solid rgb(28, 0, 129);
+  }
+
+.try{
+    grid-column: 2;
+    grid-row: 2 /1;
+    color: var(--GrayishBlue);
+    background-color: var(--Blue);  
+    padding: 0px 40px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(76, 64, 83, 0.596);
+}
+
+.try span{
+    color: white;
+    font-weight: 700;
+}
+
+
+button{
+    background-color: var(--Green);
+    border: none;
+    padding: 10px ;
+    margin: 5px;
+    width: 97%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+
+h3{
+    color: var(--GrayishBlue);
+    font-size: .5em;
+    text-align: center;
+}
+
+h3 a{
+    color: var(--Red);
+    text-decoration: none;
+    
+
+}
+
+button:hover{
+    background-color: hsl(153, 21%, 48%);
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 811px){
+
+    
+
+    .gridform{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+    .description{
+        
+        grid-column: 1;
+       grid-row: 1;
+       
+       }
+
+
+
+       .try{
+        
+        grid-column: 1;
+       grid-row: 2;
+
+       
+    }
+
+       
+       
+       form{
+           grid-column: 1;
+           grid-row: 3;
+          
+           
+       }
+
+       .container{
+        width: 450px;
+        padding: 150px ;
+    
+    }
+
+
+
+
+
+
+
+}
+
